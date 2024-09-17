@@ -1,0 +1,68 @@
+.skills-section {
+    width: 100%;
+    overflow: hidden;
+   
+    padding: 20px 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll-left 10s linear 0s infinite;
+}
+
+.skills-item {
+    min-width: 150px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.skills-item img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Add pause between scrolls */
+.skills-container {
+    animation: scroll-left 10 linear infinite;
+    animation-delay: 5s;
+}
+
+:root {
+    /* Light theme colors */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+}
+
+.dark-theme {
+    /* Dark theme colors */
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #1e90ff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* For buttons, links, and other elements */
+a, button {
+    color: var(--primary-color);
+    transition: color 0.5s ease;
+}
+
+
